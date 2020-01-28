@@ -1,0 +1,71 @@
+.heading-primary {
+    font-family: var(--font-primary);
+    font-size: 65px;
+    line-height: 87px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1.84167px;
+
+    @include respond (mobile) {
+        font-size: 30px;
+        line-height: 41px;
+        letter-spacing: 0.850001px;
+    }
+}
+
+.quote {
+
+    &__heading {
+        font-family: var(--font-primary);
+        font-size: 50px;
+        letter-spacing: .82px;
+        line-height: 67px;    
+
+        @include respond (mobile) {
+            font-size: 30px;
+            line-height: 41px;
+            letter-spacing: .850001px;
+        }
+
+        @include respond (mobile) {
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: 0.392px;
+        }
+
+        &::before {
+            content: '“';
+        }
+
+        &::after {
+            content: '”';
+        }
+    }
+
+    &__heading-element {
+        margin-top: -7px;
+        margin-right: 10%;
+        text-align: right;
+
+        @include respond (mobile) {
+            max-width: 100%;
+            margin-top: -5px;
+            margin-right: 0;
+
+            img {
+                width: 66.06%;
+            }
+        }
+    }
+
+    &--logo-box {
+        text-align: right;
+        margin-right: 3.15%;
+
+        @include respond (mobile) {
+            margin-top: 12px;
+            margin-right: 1px;
+        }
+    }
+}

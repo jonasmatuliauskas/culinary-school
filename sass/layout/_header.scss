@@ -1,0 +1,148 @@
+.header {
+    position: relative;
+    height: 1098px;
+    padding-top: 37px;
+    
+    @include respond (tablet) {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 12px;
+        padding-bottom: 8px;
+    }
+
+    &__logo-box {
+        grid-column: col-start 5 / col-end 8;
+
+        text-align: center;
+    }
+
+    &__text-box {
+        grid-column: col-start 4 / col-end 9;
+
+        text-align: center;
+        margin-top: 153px;
+    
+        @include respond (tablet) {
+            margin-top: 33px;
+            margin-bottom: 56px;
+        }
+    }
+
+    &__heading-element {
+        margin-right: 24px;
+        text-align: right;
+
+        @include respond (tablet) {
+            margin-right: 0;
+            text-align: center;
+
+            img {
+                width: 72.225%;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 26px;
+
+        @include respond (tablet) {
+            margin-top: 31px;
+        }
+    }
+
+    &__photo-box {
+        max-width: 400px;
+        object-fit: cover;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__photo-box--top {
+        grid-column: col-start 10 / -1;
+        
+        position: absolute;
+        top: 0;
+
+        @include respond (tablet) {
+            position: relative;
+            margin-top: 20px;
+        }
+    }
+
+    &__photo-box--middle {
+        grid-column: 1 / col-end 3;
+        justify-self: right;
+        
+        position: absolute;
+        top: 128px;
+
+        @include respond (tablet) {
+            position: relative;
+            top: 0;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__photo-box--bottom { 
+        grid-column: col-start 9 / -1;
+
+        position: absolute;
+        bottom: 82px;
+
+        @include respond (tablet) {
+            position: relative;
+            bottom: 0;
+        }
+    }
+
+    &__visual-element {
+        grid-column: col-start 2 / col-end 3;
+        
+        position: absolute;
+        bottom: 0;
+
+        @include respond (tablet) {
+            position: relative;
+            margin-top: 8px;
+        }
+
+        @include respond (mobile) {
+            align-self: flex-start;
+
+            img {
+                width: 58.16%;
+            }
+        }
+    }
+
+    &-bg {
+        &--green {
+            grid-column: col-start 1 / - 1;
+            
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 74.5%;
+            background-color: var(--color-secondary-light);
+            z-index: -9000;
+
+            @include respond (tablet) {
+                grid-column: 1 / - 1;
+                height: 100%;
+            }
+        }
+    }
+    
+    @include respond (tablet) {
+        &__logo-box { order: 1 }
+        &__text-box { order: 3 }
+        &__photo-box--top { order: 2 }
+        &__photo-box--middle { order: 4 }
+        &__photo-box--bottom { order: 5 }
+        &__visual-element {order: 6 }
+    } 
+}

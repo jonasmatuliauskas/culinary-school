@@ -1,0 +1,49 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        position: relative;
+        display: inline-block;
+        padding-top: 18.6px;
+        padding-right: 41.6px;
+        padding-bottom: 18.6px;
+        padding-left: 43px;
+        letter-spacing: .396667px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: var(--default-font-size);
+        text-align: center;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        @include respond (mobile) {
+            padding-top: 15.6px;
+            padding-right: 30.6px;
+            padding-bottom: 14.6px;
+            padding-left: 33px;
+        }
+    }
+
+    &:hover {
+        background-color: var(--color-primary);
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba(var(--color-dark-1), 0.2);
+    }
+    
+    &:active,
+    &:focus {
+        background-color: var(--color-primary);
+        outline: none;
+        box-shadow: 0 0.5rem 1rem rgba(#000000, 0.2);
+    }
+    
+    &--green {
+        background-color: var(--color-secondary);
+        color: var(--color-dark-1);
+    
+        &::after {
+            background-color: #fff
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.blocks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: var(--grid-column-gap);
+
+    margin-top: 131px;
+
+    @include respond (tablet) {
+        margin-top: 70px;
+    }
+
+    @include respond (mobile) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 36px;
+    }
+
+    &__block {
+
+        @include respond (mobile) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        font-size: var(--default-font-size);
+        letter-spacing: .228667px;
+        margin-bottom: 56px;
+        line-height: 17px;
+
+        @include respond (mobile) {
+            margin-bottom: 35px;
+            margin-top: 17px;
+        }
+    }
+
+    &__photo-box {
+        max-width: 495px;
+        object-fit: cover;
+
+        img {
+            max-width: 100%;
+        }
+    }
+}

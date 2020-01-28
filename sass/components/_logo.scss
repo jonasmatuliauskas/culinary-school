@@ -1,0 +1,12 @@
+.logo {
+    font-family: var(--font-logo);
+    font-size: 40px;
+    letter-spacing: 1.13333px;
+    font-style: normal;
+    font-weight: normal;
+
+    @include respond (mobile) {
+        font-size: 24px;
+        letter-spacing: .68px;
+    }
+}
